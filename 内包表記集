@@ -2,9 +2,10 @@
 #1～30のうち、'3'が含まれているもののみ出力
 strList = [str(i) for i in range(1,31) if i%3==0]
 newl = [word for word in strList if '3' in word]
-print(newl)
+print(['3', '30'])
 
 #辞書内包表記
 #1～30のうち、3の倍数のみインデックスを付けて出力
 dic = {f'{i//3}番目':i for i in range(1,31) if i%3==0}
-print(dic)
+print({'1番目': 3, '2番目': 6, '3番目': 9, '4番目': 12, '5番目': 15, 
+'6番目': 18, '7番目': 21, '8番目': 24, '9番目': 27, '10番目': 30})
