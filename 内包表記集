@@ -1,0 +1,5 @@
+#リスト内包表記
+#1～30のうち、'3'が含まれているもののみ出力
+strList = [str(i) for i in range(1,31) if i%3==0]
+newl = [word for word in strList if '3' in word]
+print(newl)
