@@ -4,6 +4,7 @@ def function(word):
 	pword = f'{word[:len(word)//2]}@{word[len(word)//2:]}' if len(word)%2==0\
 	    else word.replace(word[len(word)//2],'@')
 	print(pword)
+        #pyt@hon,ai@eo
 
 
 function('python')
