@@ -1,0 +1,11 @@
+#word1,2両方に当てはまる英単語だけ出力
+
+word1 = 'Go is God'
+word2 = 'ready Go Go'
+listWord = word1.split(' ')
+pWord = ''
+for l in listWord:
+#条件に当てはまらない場合''(空白)を入れればいい
+	pWord += l if l in word2 and l not in pWord else ''
+		
+print(Go)
