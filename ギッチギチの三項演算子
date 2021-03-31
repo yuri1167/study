@@ -1,0 +1,10 @@
+#対象英単語の文字が偶数なら真ん中に'@'
+#奇数なら真ん中の文字を'@'に置き換え
+def function(word):
+	pword = f'{word[:len(word)//2]}@{word[len(word)//2:]}' if len(word)%2==0\
+	    else word.replace(word[len(word)//2],'@')
+	print(pword)
+
+
+function('python')
+function('aiueo')
