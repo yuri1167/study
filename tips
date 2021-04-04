@@ -1,0 +1,5 @@
+#sorted関数,sortedは非破壊的
+l = ['Python', 'Ruby', 'PHP', 'JavaScript']
+#第二引数にkey=len,max,minを書くことで条件の指定
+sorted_l = sorted(l, key=len)
+print(sorted_l) #['PHP', 'Ruby', 'Python', 'JavaScript']
