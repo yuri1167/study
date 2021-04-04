@@ -1,0 +1,6 @@
+##.index()
+#リストのインデックスを取得
+numlist = [0,'1',3,2,'4',5,'7']
+#第一引数にリストの値を入れることにより取得
+nuwL = [l for l in numlist if int(l)==numlist.index(l)]
+print(nuwL)#[0, '1', '4', 5]
