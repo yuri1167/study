@@ -1,16 +1,16 @@
-#sorted関数,sortedは非破壊的
+##sorted,sortedは非破壊的
 l = ['Python', 'Ruby', 'PHP', 'JavaScript']
 #第二引数にkey=len,max,minを書くことで条件の指定
 sorted_l = sorted(l, key=len)
 print(sorted_l) #['PHP', 'Ruby', 'Python', 'JavaScript']
 
 
-#型の判定
-#数字のみ取り出す二種類の方法
+##isinstance,型の判定
 lists = [1,'3',4,'5',6,'7']
+#第一引数に対象、第二引数に型
 newL = [l for l in lists if isinstance(l,int)]
 print(newL)
-
+#これでもできる
 lists = [1,'3',4,'5',6,'7']
 newL = [l for l in lists if type(l)==int]
 print(newL)
