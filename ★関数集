@@ -21,10 +21,8 @@ list1 = [1,2,4]
 print('値は重複していません') if len(list1)==len(set(list1)) else print('値が重複しています')
 
 ##any(),all(),いずれか、もしくはすべての要素がTrueか判定
-print(all([True, True, True]))
-# True
-print(any([True, False, False]))
-# True
+print(all([True, True, True]))# True
+print(any([True, False, False]))# True
 #以下実践
 l = [1, 2, 3, '4', 5]
 if any([v for v in l if isinstance(v, str)]):
