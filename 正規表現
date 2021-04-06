@@ -1,0 +1,5 @@
+##正規表現を使って該当文字の検索
+#reをインポートしなければ正規表現は使えない
+import re
+li2 = [num for num in telephone_numbers if re.findall('080..........',num)]
+print(li2)
