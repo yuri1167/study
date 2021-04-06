@@ -1,0 +1,9 @@
+##.find()メソッド,引数に指定した文字が、呼び出し元の何番目にあるか
+st = "Hello, Python and Perl and Ruby and more."
+#戻り値はインデックス番号
+fd = st.find('Python')
+print(fd)#7
+#使用例
+phone_numbers = ['080-1203-4455', '090-9372-9682', '03-9471-5929', '070-3917-5918', '04-8572-8910']
+newL = [num for num in phone_numbers if num.find('-')==3]
+print(newL)
