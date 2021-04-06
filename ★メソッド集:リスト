@@ -4,3 +4,17 @@ numlist = [0,'1',3,2,'4',5,'7']
 #第一引数にリストの値を入れることにより取得
 nuwL = [l for l in numlist if int(l)==numlist.index(l)]
 print(nuwL)#[0, '1', '4', 5]
+
+##.insert()メソッド,第一引数にインデックス番号、第二引数に指定値
+##指定したインデックス番号の場所に第二引数を挿入できる
+list1 = [1,2,3,4,5]
+for num in range(0,10,2):
+	list1.insert(num,'list')
+print(list1)#['list', 1, 'list', 2, 'list', 3, 'list', 4, 'list', 5]
+
+##.remove()メソッド,引数に指定した要素をリストから消去
+li = ['Python 1', 'Java 1', 1, 'Python 2', 'Java 2', 2]
+for l in li:
+	if 'Python' in str(l):
+		li.remove(l)
+print(li)#['Java 1', 1, 'Java 2', 2]
