@@ -1,3 +1,12 @@
+##ラムダ式の基本
+##関数を作るまでもない処理を書くときに使う
+function = lambda num : num*2
+
+num = 12
+#戻り値を得たければ、結果を入れる変数を用意
+ans = function(num)
+print(ans)
+
 ##sortedでkeyにラムダ式を使う
 l1 = [4, 6, 9, 2]
 l2 = [3, 5, 7]
