@@ -30,7 +30,7 @@ if any([v for v in l if isinstance(v, str)]):
 else:
     print('文字列は入っていません。')
 
-#enumurate関数,リスト、タプルなどのイテラブルobjからインデックス番号を取得できる
+##enumurate関数,リスト、タプルなどのイテラブルobjからインデックス番号を取得できる
 l = ['Alice', 'Bob', 'Charlie']
 #入れる変数は、番号、要素の順番
 for i, name in enumerate(l):
@@ -38,3 +38,8 @@ for i, name in enumerate(l):
 # 0 Alice
 # 1 Bob
 # 2 Charlie
+
+##reversed関数,要素の順番を逆順にする。元のリストは変えない非破壊的
+t = 1, '2', 3, '4', 5, '6', 7, '8', 9
+reversed_t = tuple(reversed(t))
+print(f'反転させたタプル : {reversed_t}')
