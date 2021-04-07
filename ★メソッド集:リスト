@@ -18,3 +18,12 @@ for l in li:
 	if 'Python' in str(l):
 		li.remove(l)
 print(li)#['Java 1', 1, 'Java 2', 2]
+
+##.reverse()メソッド,順番を逆にする
+org_list = [1, 2, 3, 4, 5]
+org_list.reverse()
+print(org_list)# [5, 4, 3, 2, 1]
+#reverse()が返すのはNoneなので注意。
+print(org_list.reverse())# None
+#非破壊的にしたいなら、reversed関数を使用
+
