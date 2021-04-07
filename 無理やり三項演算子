@@ -1,5 +1,11 @@
-#word1,2両方に当てはまる英単語だけ出力
+#基本の型はこう。
+for i in range(10):
+#elseは書かないといけないので、何も入れたくない時は代入先の変数に合わせて''とか0とか入れる
+num = 0
+	num += i if i==4 else 0
+print(num)
 
+#word1,2両方に当てはまる英単語だけ出力
 word1 = 'Go is God'
 word2 = 'ready Go Go'
 listWord = word1.split(' ')
