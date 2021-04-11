@@ -11,6 +11,7 @@ lists = [1,'3',4,'5',6,'7']
 newL = [l for l in lists if isinstance(l,int)]
 print(newL)
 #これでもできる
+##type,型の判定
 lists = [1,'3',4,'5',6,'7']
 newL = [l for l in lists if type(l)==int]
 print(newL)
