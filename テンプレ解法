@@ -1,0 +1,4 @@
+#リストの中の特定の値の数を数えるテンプレ
+l = ['1', 2, '3', 4, '5']
+judgeL = [tOrF for  tOrF in l if type(tOrF)==str]
+print(len(judgeL))#3
