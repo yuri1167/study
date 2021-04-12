@@ -1,0 +1,69 @@
+##.updete(),辞書の要素追加
+d1 = {'A': 111, 'B': 222, 'C': 333}
+d2 = {'D': 444, 'E': 555} 
+d3 = {'F': 666}
+d4 = {}
+for d in (d1,d2,d3):
+#.update()は引数を一つしかもてない
+    d4.update(d)
+print(d4)
+
+##.keys(),キーを取得
+d = {'A': 111, 'B': 222, 'C': 333}
+result = 'A' in d.keys()
+print(result)#True
+
+##.values(),valueを取得
+d = {'A': 111, 'B': 222, 'C': 333}
+result = 444 in d.values()
+print(result)#False
+
+##.items(),keyとvalue両方を取得
+d = {'A': 111, 'B': 222, 'C': 333}
+d2 = {k:v for k,v in d.items() if d[k]>150}
+print(d2)
+
+##辞書のkeyに対するvalueの取り方
+li = ['B', 'C', 'D', 'A']
+d = {'A': 111, 'B': 222, 'C': 333} 
+for l in li:
+##.get(),引数にキーを指定してvalueを取得
+	print(d.get(l))
+#Bに対応するValue : 222 
+#Cに対応するValue : 333 
+#Dに対応するValue : None 
+#Aに対応するValue : 111
+
+li = ['B', 'C', 'D', 'A']
+d = {'A': 111, 'B': 222, 'C': 333} 
+for l in li:
+    #1,[](スライスの方が処理は早い)
+    #ただし、[]スライスはKeyError: ''がでる
+	print(d[l])
+  
+##辞書をキーでソート
+d = {'B': 222, 'A': 111, 'D': 444, 'C': 333}
+#sorted(d.items())の部分で、各要素がタプル型でソートされる(自動的にキーでソート)
+#[('A', 111), ('B', 222), ('C', 333), ('D', 444)]
+#その後dict()で囲み辞書型にしている
+sort_by_key = dict(sorted(d.items()))
+print(f'Keyでソートした辞書 : {sort_by_key}')#{'A': 111, 'B': 222, 'C': 333, 'D': 444}
+#ラムダ式でキーにkeyを指定しソートすることも可能
+#valueでソートしたいときは[1]を渡す
+sort_lambda_key = dict(sorted(d.items(),key = lambda x:x[0]))
+print(sort_lambda_key)#{'A': 111, 'B': 222, 'C': 333, 'D': 444}
+#valueでソート
+d = {'B': 222, 'A': 111, 'D': 333, 'C': 444}
+newd = dict(sorted(d.items(), key=lambda x:x[1]))
+print(newd)#{'A': 111, 'B': 222, 'D': 333, 'C': 444}
+
+d = {'B': 222, 'A': 111, 'D': 444, 'C': 333}
+newd = {nd:d[nd] for nd in d if d.get(nd)%2==0}
+print(newd)
+##.copy()メソッド仕様ver.
+d = {'B': 222, 'A': 111, 'D': 444, 'C': 333}
+new_d = d.copy()
+for k, v in d.items():
+    if v % 2 != 0:
+        del new_d[k]
+print(f'奇数を削除した辞書 : {new_d}')#{'B': 222, 'D': 444}
