@@ -51,3 +51,11 @@ values = [111, 222 ,333]
 #k:vで辞書に
 dic = {k:v for k,v in zip(keys,values)}
 print(dic)
+
+
+##join関数,区切りたい文字.join(リスト)でリストの値を文字列にできる
+sentence = 'This is the Python exercise.'
+#文字列.split(),指定文字で区切ったリストを返す
+newSlist = [s for s in sentence.split(' ') if 't' not in s]
+newSentence = ' '.join(newSlist)
+print(newSentence)#This is exercise.
