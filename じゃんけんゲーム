@@ -1,0 +1,38 @@
+import random
+
+jankenSet = {0:'グー', 1:'チョキ', 2: 'パー'}  
+count = 1
+wincount = 0
+while count<4:
+	print(f'{count}回目の勝負')
+	playerNum = 0
+	while True:
+		playersInput = input('0,1,2のうち好きな数字を入力してください')
+		if playersInput.isalpha():
+			continue
+		elif playersInput.isdigit() and int(playersInput)<3:
+			playerNum = int(playersInput)
+			break
+
+	computerNum = random.randint(0, 2)
+	computerHunde = jankenSet[computerNum]
+	playerHunde = jankenSet[playerNum]
+
+	print(f'自分の手{playerHunde}')
+	print(f'コンピューターの手{computerHunde}')
+
+	result = ''
+	if playerHunde == computerHunde:
+		result = 'あいこ'
+	elif (playerHunde == 'グー' and computerHunde == 'チョキ') \
+	    or (playerHunde == 'チョキ' and computerHunde == 'パー')\
+	    or (playerHunde == 'パー' and computerHunde == 'グー'):
+		result = '勝ち'
+		wincount += 1
+	elif (playerHunde == 'チョキ' and computerHunde == 'グー') \
+	    or (playerHunde == 'パー' and computerHunde == 'チョキ')\
+	    or (playerHunde == 'グー' and computerHunde == 'パー'):
+	    result = '負け'
+	print(result)
+	count += 1
+print(f'合計で{wincount}回勝てました')
