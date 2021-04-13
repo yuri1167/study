@@ -2,3 +2,10 @@
 list1 = [1,2,3,4]
 a,b,c,d = list1
 print(a,b,c,d)#1,2,3,4
+
+##辞書を文字列に変換
+import json
+s = '{"A": 111, "B": 222, "C": 333}'
+d = json.loads(s)
+print(f'変換した辞書 : {d}')#{'A': 111, 'B': 222, 'C': 333}
+print(f'型: {type(d)}')#<class 'dict'>
