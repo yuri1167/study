@@ -7,3 +7,10 @@ print(fd)#7
 phone_numbers = ['080-1203-4455', '090-9372-9682', '03-9471-5929', '070-3917-5918', '04-8572-8910']
 newL = [num for num in phone_numbers if num.find('-')==3]
 print(newL)
+
+##文字列.split(),指定文字で区切ったリストを返す
+sentence = 'This is the Python exercise.'
+newSlist = [s for s in sentence.split(' ') if 't' not in s]
+#join関数でリストを文字列に変換
+newSentence = ' '.join(newSlist)
+print(newSentence)#This is exercise.
