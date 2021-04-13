@@ -1,0 +1,7 @@
+##True, Falseはそれぞれ1, 0と等価の為、
+#リストに格納された数値の合計を算出する組み込み関数sum()を使って、TrueとFalseのリストからTrueの数をカウントできる。
+l = [False, True, False, False, True]
+c = len(l) - sum(l)
+print(f'Falseの数 : {c}')#Falseの数 : 3
+#また、True+Trueで計算することも可能
+print(True+True)#2
